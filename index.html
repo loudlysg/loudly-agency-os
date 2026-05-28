@@ -1504,10 +1504,10 @@ function renderRepOverview(c,pt,ps,ta) {
         ${rep.downline.map(did=>{
           const dm = REP_HIERARCHY[did];
           const dc = CLIENTS.filter(cl=>cl.rep.includes(dm.name.split(' ')[0]));
-          return \`<div style="flex:1;padding:12px;background:var(--s2);border-radius:var(--rsm)">
+          return `<div style="flex:1;padding:12px;background:var(--s2);border-radius:var(--rsm)">
             <div style="font-size:12px;font-weight:500;color:var(--t1);margin-bottom:4px">\${dm.name}</div>
             <div style="font-size:11px;color:var(--t3)">\${dc.filter(c=>c.status==='Active').length} clients · \${PIPELINE.filter(p=>p.rep===dm.name.split(' ')[0]).length} leads</div>
-          </div>\`;
+          </div>`;
         }).join('')}
       </div>
     </div>`:''}`;
